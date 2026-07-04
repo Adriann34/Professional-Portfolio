@@ -50,6 +50,7 @@ export const skillCards: SkillCard[] = [
     iconBg: "rgba(91,127,255,0.12)",
     tags: [
       { label: "React" },
+      { label: "Next.js" },
       { label: "TypeScript" },
       { label: "Tailwind CSS" },
     ],
@@ -63,6 +64,7 @@ export const skillCards: SkillCard[] = [
       { label: "PHP" },
       { label: "Cloudflare Workers" },
       { label: "Node.js" },
+      { label: "Prisma" },
     ],
   },
   {
@@ -70,7 +72,13 @@ export const skillCards: SkillCard[] = [
     name: "Database & Cloud",
     iconColor: "#00d4aa",
     iconBg: "rgba(0,212,170,0.1)",
-    tags: [{ label: "MySQL" }, { label: "Firebase" }, { label: "Firestore" }],
+    tags: [
+      { label: "MySQL" },
+      { label: "PostgreSQL" },
+      { label: "Firebase" },
+      { label: "Firestore" },
+      { label: "Supabase" },
+    ],
   },
 ];
 

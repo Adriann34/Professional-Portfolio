@@ -8,11 +8,11 @@ type ChipAccent = "accent1" | "accent2" | "accent3";
 
 const STACK_CHIPS: { label: string; accent: ChipAccent }[] = [
   { label: "React", accent: "accent1" },
+  { label: "Next.js", accent: "accent1" },
   { label: "TypeScript", accent: "accent1" },
   { label: "Tailwind", accent: "accent2" },
   { label: "PHP", accent: "accent2" },
   { label: "Firebase", accent: "accent3" },
-  { label: "Node.js", accent: "accent3" },
 ];
 
 const Hero: React.FC = () => {
