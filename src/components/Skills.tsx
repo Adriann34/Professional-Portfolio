@@ -7,8 +7,8 @@ const ICONS: Record<string, React.ReactNode> = {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#5b7fff"
-      strokeWidth="1.8"
+      stroke="currentColor"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -24,8 +24,8 @@ const ICONS: Record<string, React.ReactNode> = {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#a259ff"
-      strokeWidth="1.8"
+      stroke="currentColor"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -40,8 +40,8 @@ const ICONS: Record<string, React.ReactNode> = {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#00d4aa"
-      strokeWidth="1.8"
+      stroke="currentColor"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -57,12 +57,7 @@ const SkillCardItem: React.FC<{
   delay: string;
 }> = ({ card, delay }) => {
   const ref = useFadeIn<HTMLDivElement>();
-  const cssVars = {
-    "--delay": delay,
-    "--icon-bg": card.iconBg,
-    "--accent": card.iconColor,
-    "--accent-30": `${card.iconColor}4d`,
-  } as React.CSSProperties;
+  const cssVars = { "--delay": delay } as React.CSSProperties;
 
   return (
     <div className="skill-card fade-in" style={cssVars} ref={ref}>
@@ -87,7 +82,9 @@ const Skills: React.FC = () => {
     <section className="section" id="skills">
       <div className="container">
         <div className="fade-in" ref={titleRef}>
-          <div className="section-eyebrow">Expertise</div>
+          <div className="section-eyebrow">
+            <span className="eyebrow-prompt">$</span> ls skills/
+          </div>
           <div className="section-title">Skills &amp; Technologies</div>
         </div>
         <div className="skills-grid">

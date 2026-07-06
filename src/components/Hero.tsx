@@ -2,17 +2,14 @@ import React, { useState } from "react";
 import { useFadeIn } from "../hooks/useFadeIn";
 import { scrollToSection } from "../utils/scroll";
 
-// Chip color is one of three accent palettes; class names map to the
-// .chip-accent1/2/3 rules in index.css so chips stay visually grouped by layer.
-type ChipAccent = "accent1" | "accent2" | "accent3";
-
-const STACK_CHIPS: { label: string; accent: ChipAccent }[] = [
-  { label: "React", accent: "accent1" },
-  { label: "Next.js", accent: "accent1" },
-  { label: "TypeScript", accent: "accent1" },
-  { label: "Tailwind", accent: "accent2" },
-  { label: "PHP", accent: "accent2" },
-  { label: "Firebase", accent: "accent3" },
+const STACK_CHIPS = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Prisma",
+  "PostgreSQL",
+  "Supabase",
 ];
 
 const Hero: React.FC = () => {
@@ -36,10 +33,11 @@ const Hero: React.FC = () => {
             </div>
             <div className="hero-role">Full Stack Developer</div>
             <p className="hero-desc">
-              Building full-stack web applications with React, TypeScript,
-              Tailwind, and modern backend technologies. Focused on
-              delivering visually polished, seamless, and user-friendly
-              experiences.
+              Full-stack developer who's shipped <b>production software</b> for
+              a real business and built independent systems handling{" "}
+              <b>live data sync</b> and <b>failure recovery</b>. I care about
+              software that holds up when things go wrong, not just when
+              everything works.
             </p>
             <div className="hero-actions">
               <a
@@ -91,54 +89,62 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Dashboard-style side panels */}
+          {/* Terminal-styled profile card + stat cards */}
           <div
             className="hero-right fade-in"
             style={{ "--delay": "0.15s" } as React.CSSProperties}
             ref={rightRef}
           >
             <div className="profile-card">
-              <div className="avatar">
-                {avatarError ? (
-                  <span className="avatar-initials">AT</span>
-                ) : (
-                  <img
-                    src="/images/profile-photo.png"
-                    alt="Adrian Tan"
-                    onError={() => setAvatarError(true)}
-                  />
-                )}
+              <div className="term-bar">
+                <div className="term-dots">
+                  <span className="term-dot term-dot-red" />
+                  <span className="term-dot term-dot-yellow" />
+                  <span className="term-dot term-dot-green" />
+                </div>
+                <span className="term-title">adrian@portfolio: ~</span>
               </div>
-              <div>
-                <div className="profile-name">Adrian Tan</div>
-                <div className="profile-title">Full Stack Developer</div>
+              <div className="profile-body">
+                <div className="avatar">
+                  {avatarError ? (
+                    <span className="avatar-initials">AT</span>
+                  ) : (
+                    <img
+                      src="/images/profile-photo.png"
+                      alt="Adrian Tan"
+                      onError={() => setAvatarError(true)}
+                    />
+                  )}
+                </div>
+                <div>
+                  <div className="profile-name">Adrian Tan</div>
+                  <div className="profile-title">Full Stack Developer</div>
+                </div>
+                <div className="profile-dot" />
               </div>
-              <div className="profile-dot" />
             </div>
 
             <div className="hero-cards-grid">
               <div className="hcard">
-                <div className="hcard-label">Projects</div>
-                <div className="hcard-value hcard-accent">2+ Projects</div>
+                <div className="hcard-label">PROJECTS</div>
+                <div className="hcard-value">2+ Projects</div>
                 <div className="hcard-sub">Shipped products</div>
               </div>
               <div className="hcard">
-                <div className="hcard-label">Experience</div>
-                <div className="hcard-value hcard-accent2">1+ Years</div>
+                <div className="hcard-label">EXPERIENCE</div>
+                <div className="hcard-value">1+ Years</div>
                 <div className="hcard-sub">Years building</div>
               </div>
-              <div className="hcard hcard-wide">
-                <div className="hcard-label">Primary stack</div>
-                <div className="stack-chip-row">
-                  {STACK_CHIPS.map((chip) => (
-                    <span
-                      key={chip.label}
-                      className={`stack-chip chip-${chip.accent}`}
-                    >
-                      {chip.label}
-                    </span>
-                  ))}
-                </div>
+            </div>
+
+            <div className="stack-card">
+              <div className="stack-label">PRIMARY STACK</div>
+              <div className="stack-chip-row">
+                {STACK_CHIPS.map((label) => (
+                  <span key={label} className="stack-chip">
+                    {label}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

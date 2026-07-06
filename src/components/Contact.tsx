@@ -88,8 +88,8 @@ const ContactIcon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#5b7fff"
-      strokeWidth="1.8"
+      stroke="currentColor"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -202,7 +202,9 @@ const Contact: React.FC = () => {
     <section className="section" id="contact">
       <div className="container">
         <div className="fade-in" ref={titleRef}>
-          <div className="section-eyebrow">Let's Connect</div>
+          <div className="section-eyebrow">
+            <span className="eyebrow-prompt">$</span> ./contact.sh
+          </div>
           <div className="section-title">Get in Touch</div>
         </div>
         <div className="contact-grid">

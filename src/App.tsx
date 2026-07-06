@@ -12,11 +12,8 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <div className="grad-line" />
         <Skills />
-        <div className="grad-line" />
         <Projects />
-        <div className="grad-line" />
         <Contact />
       </main>
       <Footer />

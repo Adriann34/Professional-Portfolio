@@ -8,6 +8,15 @@ interface LightboxImage {
   alt: string;
 }
 
+// Fake "address bar" text for each project's terminal-chrome preview —
+// the live URL when deployed, otherwise a plausible .app slug from the title.
+const getProjectUrl = (project: Project): string => {
+  if (project.liveUrl) {
+    return project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  }
+  return `${project.title.split(" ")[0].toLowerCase()}.app`;
+};
+
 const Lightbox: React.FC<{
   images: LightboxImage[];
   index: number;
@@ -122,56 +131,49 @@ const ProjectVisual: React.FC<{ project: Project }> = ({ project }) => {
 
   return (
     <>
-      <div
-        className="project-visual"
-        style={{ "--visual-bg": project.visualBackground } as React.CSSProperties}
-      >
-        <div
-          className="project-glow"
-          style={{ "--accent": project.glowColor } as React.CSSProperties}
-        />
-        {mainError ? (
-          <div
-            className="project-visual-fallback"
-            style={
-              {
-                "--accent-12": `${project.glowColor}12`,
-                "--accent-26": `${project.glowColor}26`,
-              } as React.CSSProperties
-            }
-          >
-            {project.title} Preview
+      <div className="project-visual">
+        <div className="term-bar">
+          <div className="term-dots">
+            <span className="term-dot term-dot-red" />
+            <span className="term-dot term-dot-yellow" />
+            <span className="term-dot term-dot-green" />
           </div>
-        ) : (
-          <div className="project-mockup-stack">
-            <img
-              className="main-shot zoomable"
-              src={project.mainImage}
-              alt={project.mainImageAlt}
-              onError={() => setMainError(true)}
-              onClick={() => setLightboxIndex(mainIndex)}
-            />
-            {project.secondaryImage && !secondaryError && (
+          <span className="term-title">{getProjectUrl(project)}</span>
+        </div>
+        <div className="project-visual-body">
+          {mainError ? (
+            <div className="project-visual-fallback">{project.title} Preview</div>
+          ) : (
+            <div className="project-mockup-stack">
               <img
-                className="secondary-shot zoomable"
-                src={project.secondaryImage}
-                alt={project.secondaryImageAlt}
-                onError={() => setSecondaryError(true)}
-                onClick={() => setLightboxIndex(secondaryIndex)}
+                className="main-shot zoomable"
+                src={project.mainImage}
+                alt={project.mainImageAlt}
+                onError={() => setMainError(true)}
+                onClick={() => setLightboxIndex(mainIndex)}
               />
-            )}
-            {images.length > 2 && (
-              <button
-                type="button"
-                className="gallery-count-pill"
-                onClick={() => setLightboxIndex(0)}
-                aria-label={`View all ${images.length} screenshots`}
-              >
-                +{images.length - 2} more
-              </button>
-            )}
-          </div>
-        )}
+              {project.secondaryImage && !secondaryError && (
+                <img
+                  className="secondary-shot zoomable"
+                  src={project.secondaryImage}
+                  alt={project.secondaryImageAlt}
+                  onError={() => setSecondaryError(true)}
+                  onClick={() => setLightboxIndex(secondaryIndex)}
+                />
+              )}
+              {images.length > 2 && (
+                <button
+                  type="button"
+                  className="gallery-count-pill"
+                  onClick={() => setLightboxIndex(0)}
+                  aria-label={`View all ${images.length} screenshots`}
+                >
+                  +{images.length - 2} more
+                </button>
+              )}
+            </div>
+          )}
+        </div>
       </div>
       {lightboxIndex !== null && (
         <Lightbox
@@ -190,26 +192,19 @@ const ProjectCard: React.FC<{ project: Project; delay: string }> = ({
   delay,
 }) => {
   const ref = useFadeIn<HTMLDivElement>();
-  const cardVars = {
-    "--delay": delay,
-    "--accent": project.accentColor,
-  } as React.CSSProperties;
+  const cardVars = { "--delay": delay } as React.CSSProperties;
 
   return (
     <div className="project-card fade-in" style={cardVars} ref={ref}>
       <div className="project-inner">
         <ProjectVisual project={project} />
         <div className="project-info">
-          <div className="project-number">{project.number}</div>
           <div className="project-category">{project.category}</div>
           <div className="project-title">{project.title}</div>
           <p className="project-desc">{project.description}</p>
           <ul className="project-highlights">
             {project.highlights.map((h) => (
-              <li key={h.text}>
-                <span className="highlight-dot" />
-                {h.text}
-              </li>
+              <li key={h.text}>{h.text}</li>
             ))}
           </ul>
           <div className="project-stack">
@@ -256,7 +251,9 @@ const Projects: React.FC = () => {
     <section className="section" id="projects">
       <div className="container">
         <div className="fade-in" ref={titleRef}>
-          <div className="section-eyebrow">Portfolio</div>
+          <div className="section-eyebrow">
+            <span className="eyebrow-prompt">$</span> cat projects.log
+          </div>
           <div className="section-title">Featured Projects</div>
         </div>
         <div className="projects-list">
