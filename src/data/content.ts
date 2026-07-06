@@ -84,7 +84,42 @@ export const skillCards: SkillCard[] = [
 
 export const projects: Project[] = [
   {
-    number: "01 / 02",
+    number: "01 / 03",
+    category: "Full-Stack Marketplace",
+    accentColor: "#b8722c",
+    title: "Renew",
+    description:
+      "A marketplace for buying and selling used PC hardware, GPUs, CPUs, and everything in between, where every listing carries a seller-filled diagnostic report (condition grade, benchmark score, tested power draw) backed by photo proof, so buyers can trust a used part before it ships. Built on Next.js, TypeScript with Prisma/Supabase Postgres for data, Supabase Auth for sign-in, and Supabase Realtime for listing-scoped buyer/seller chat.",
+    highlights: [
+      { text: "Diagnostic report listings include grade, benchmark score, wattage, photo proof, tailored per hardware category" },
+      { text: "Full auth: email/password with reset flow, plus Google OAuth via Supabase" },
+      { text: "Browse with category tabs, grade/price filters, search, and sort" },
+      { text: "Listing-scoped realtime chat between buyer and seller via Supabase Realtime" },
+    ],
+    stack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Prisma", "Supabase"],
+    mainImage: "/images/renew-01-homepage.jpg",
+    mainImageAlt: "Renew homepage — used PC hardware marketplace with a featured verified listing",
+    secondaryImage: "/images/renew-10-listing-view.jpg",
+    secondaryImageAlt: "Renew listing detail page showing the diagnostic report and proof checklist",
+    glowColor: "#b8722c",
+    visualBackground:
+      "linear-gradient(135deg, rgba(184,114,44,0.1), rgba(0,212,170,0.05))",
+    gallery: [
+      { src: "/images/renew-01-homepage.jpg", alt: "Homepage — hero, featured listing, and category strip" },
+      { src: "/images/renew-02-recently-verified.jpg", alt: "Homepage — recently verified listings grid" },
+      { src: "/images/renew-03-homepage-bottom.jpg", alt: "Homepage — trust bar and seller call-to-action" },
+      { src: "/images/renew-04-browse-listings.jpg", alt: "Browse listings — category tabs, filters, and sort" },
+      { src: "/images/renew-05-sell-form.jpg", alt: "Sell hardware — category picker" },
+      { src: "/images/renew-06-sell-creation.jpg", alt: "Sell hardware — listing creation form with diagnostic report" },
+      { src: "/images/renew-07-sell-preview.jpg", alt: "Sell hardware — live preview while filling out the diagnostic report" },
+      { src: "/images/renew-08-account.jpg", alt: "Account dashboard — your listings" },
+      { src: "/images/renew-09-account-settings.jpg", alt: "Account dashboard — profile and security settings" },
+      { src: "/images/renew-10-listing-view.jpg", alt: "Listing detail page with diagnostic report and proof checklist" },
+      { src: "/images/renew-11-chat.jpg", alt: "Listing-scoped realtime chat between buyer and seller" },
+    ],
+  },
+  {
+    number: "02 / 03",
     category: "Live-Service Dashboard System",
     accentColor: "#8b5cf6",
     title: "Gacha Command Center",
@@ -118,7 +153,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    number: "02 / 02",
+    number: "03 / 03",
     category: "Operations Platform",
     accentColor: "#00d4aa",
     title: "Taters Web Work System",
