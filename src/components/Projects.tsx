@@ -209,7 +209,7 @@ const ProjectCard: React.FC<{ project: Project; delay: string }> = ({
           </ul>
           <div className="project-stack">
             {project.stack.map((tech) => (
-              <span className="stack-tag" key={tech}>
+              <span className="stack-tag ui-tag" key={tech}>
                 {tech}
               </span>
             ))}
@@ -219,7 +219,7 @@ const ProjectCard: React.FC<{ project: Project; delay: string }> = ({
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="btn-grad project-cta"
+              className="btn-grad ui-button project-cta"
             >
               <svg
                 width="14"
@@ -249,7 +249,7 @@ const Projects: React.FC = () => {
 
   return (
     <section className="section" id="projects">
-      <div className="container">
+      <div className="container ui-container">
         <div className="fade-in" ref={titleRef}>
           <div className="section-eyebrow">
             <span className="eyebrow-prompt">$</span> cat projects.log

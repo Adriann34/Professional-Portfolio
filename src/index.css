@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Shared primitives for new sections/components. Existing styles below
+     remain the visual source of truth for the current page. */
+  .ui-container {
+    @apply mx-auto w-full max-w-content;
+  }
+
+  .ui-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-md font-mono;
+  }
+
+  .ui-tag {
+    @apply rounded-md border border-border-bright bg-page font-mono text-muted;
+  }
+}
+
 * ,
 *::before,
 *::after {

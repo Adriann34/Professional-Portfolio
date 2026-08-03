@@ -200,7 +200,7 @@ const Contact: React.FC = () => {
 
   return (
     <section className="section" id="contact">
-      <div className="container">
+      <div className="container ui-container">
         <div className="fade-in" ref={titleRef}>
           <div className="section-eyebrow">
             <span className="eyebrow-prompt">$</span> ./contact.sh
@@ -274,7 +274,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="btn-grad btn-grad-block"
+                className="btn-grad ui-button btn-grad-block"
                 disabled={status === "submitting"}
               >
                 <svg

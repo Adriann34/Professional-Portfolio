@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav>
-      <div className="nav-inner">
+      <div className="nav-inner ui-container">
         <span className="nav-logo">
           adrian
           <span className="nav-logo-cursor" aria-hidden="true" />

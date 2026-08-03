@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="section" id="about">
-      <div className="container">
+      <div className="container ui-container">
         <div className="hero-grid">
           <div className="fade-in" ref={leftRef}>
             <div className="hero-availability">
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="hero-actions">
               <a
                 href="#projects"
-                className="btn-grad"
+                className="btn-grad ui-button"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection("projects");
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
               </a>
               <a
                 href="#contact"
-                className="btn-ghost"
+                className="btn-ghost ui-button"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection("contact");
@@ -127,12 +127,12 @@ const Hero: React.FC = () => {
             <div className="hero-cards-grid">
               <div className="hcard">
                 <div className="hcard-label">PROJECTS</div>
-                <div className="hcard-value">2+ Projects</div>
+                <div className="hcard-value">3+ Projects</div>
                 <div className="hcard-sub">Shipped products</div>
               </div>
               <div className="hcard">
                 <div className="hcard-label">EXPERIENCE</div>
-                <div className="hcard-value">1+ Years</div>
+                <div className="hcard-value">1.5+ Years</div>
                 <div className="hcard-sub">Years building</div>
               </div>
             </div>
