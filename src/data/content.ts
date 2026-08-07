@@ -9,7 +9,12 @@ export interface SkillCard {
 }
 
 export interface ProjectHighlight {
+  text: string | ProjectTextPart[];
+}
+
+export interface ProjectTextPart {
   text: string;
+  bold?: boolean;
 }
 
 export interface ProjectGalleryImage {
@@ -20,7 +25,7 @@ export interface ProjectGalleryImage {
 export interface Project {
   category: string;
   title: string;
-  description: string;
+  description: string | ProjectTextPart[];
   highlights: ProjectHighlight[];
   stack: string[];
   mainImage: string;
@@ -75,15 +80,48 @@ export const projects: Project[] = [
   {
     category: "Full-Stack Marketplace",
     title: "Renew",
-    description:
-      "A marketplace for buying and selling used PC hardware, GPUs, CPUs, and everything in between, where every listing carries a seller-filled diagnostic report (condition grade, benchmark score, tested power draw) backed by photo proof, so buyers can trust a used part before it ships. Built on Next.js, TypeScript with Prisma/Supabase Postgres for data, Supabase Auth for sign-in, and Supabase Realtime for listing-scoped buyer/seller chat.",
-    highlights: [
-      { text: "Diagnostic report listings include grade, benchmark score, wattage, photo proof, tailored per hardware category" },
-      { text: "Full auth: email/password with reset flow, plus Google OAuth via Supabase" },
-      { text: "Browse with category tabs, grade/price filters, search, and sort" },
-      { text: "Listing-scoped realtime chat between buyer and seller via Supabase Realtime" },
+    description: [
+      { text: "Renew is an " },
+      { text: "AI-powered marketplace", bold: true },
+      { text: " for used PC hardware that replaces seller claims with " },
+      { text: "machine-verified evidence", bold: true },
+      { text: ". Sellers upload proof photos, and an " },
+      { text: "AI vision system", bold: true },
+      { text: " verifies hardware condition, benchmark performance, power draw, and boot status to generate an inspection-style verification badge for every listing." },
     ],
-    stack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Prisma", "Supabase"],
+    highlights: [
+      { text: [{ text: "AI-powered photo verification", bold: true }] },
+      { text: [{ text: "AI diagnostic autofill listing system", bold: true }] },
+      { text: [{ text: "AI customer service chatbot", bold: true }, { text: " grounded in the platform's knowledge base" }] },
+      { text: [
+        { text: "Real-time buyer to seller chat", bold: true },
+        { text: " with photo attachments, strict buyer to seller scope, delivered live via " },
+        { text: "Supabase Realtime", bold: true },
+      ] },
+      { text: [
+        { text: "Multi-currency marketplace", bold: true },
+        { text: " with " },
+        { text: "live exchange rates", bold: true },
+        { text: " and geolocation detection" },
+      ] },
+      { text: [{ text: "Full marketplace lifecycle", bold: true }, { text: " (browse, create, edit, save, sell)" }] },
+      { text: [
+        { text: "Seller dashboard", bold: true },
+        { text: ", " },
+        { text: "full auth", bold: true },
+        { text: " (email/password + Google OAuth), responsive dark/light theme, and " },
+        { text: "defensive input validation", bold: true },
+      ] },
+      { text: [
+        { text: "Anti-abuse engineering", bold: true },
+        { text: " via Postgres-backed " },
+        { text: "fixed-window rate limiting", bold: true },
+        { text: " with global/per-user/per-IP kill switches and " },
+        { text: "fail-closed defaults", bold: true },
+        { text: ", protecting AI and upload costs" },
+      ] },
+    ],
+    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Supabase Postgres", "Supabase Auth", "Supabase Realtime", "Supabase Storage", "Google Gemini", "Vercel"],
     mainImage: "/images/renew-new/Renew_Home_1.png",
     mainImageAlt: "Renew homepage — used PC hardware marketplace with a featured verified listing",
     secondaryImage: "/images/renew-new/Renew_Listing_4.png",

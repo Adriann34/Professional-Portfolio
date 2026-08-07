@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { projects, Project } from "../data/content";
+import { projects, Project, ProjectTextPart } from "../data/content";
 import { useFadeIn } from "../hooks/useFadeIn";
 
 interface LightboxImage {
@@ -15,6 +15,18 @@ const getProjectUrl = (project: Project): string => {
     return project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "");
   }
   return `${project.title.split(" ")[0].toLowerCase()}.app`;
+};
+
+const renderRichText = (content: string | ProjectTextPart[], keyPrefix: string) => {
+  if (typeof content === "string") return content;
+
+  return content.map((part, index) =>
+    part.bold ? (
+      <b key={`${keyPrefix}-${index}`}>{part.text}</b>
+    ) : (
+      <React.Fragment key={`${keyPrefix}-${index}`}>{part.text}</React.Fragment>
+    )
+  );
 };
 
 const Lightbox: React.FC<{
@@ -201,10 +213,14 @@ const ProjectCard: React.FC<{ project: Project; delay: string }> = ({
         <div className="project-info">
           <div className="project-category">{project.category}</div>
           <div className="project-title">{project.title}</div>
-          <p className="project-desc">{project.description}</p>
+          <p className="project-desc">
+            {renderRichText(project.description, `${project.title}-description`)}
+          </p>
           <ul className="project-highlights">
             {project.highlights.map((h) => (
-              <li key={h.text}>{h.text}</li>
+              <li key={typeof h.text === "string" ? h.text : h.text.map((part) => part.text).join("")}>
+                {renderRichText(h.text, `${project.title}-highlight`)}
+              </li>
             ))}
           </ul>
           <div className="project-stack">

@@ -784,6 +784,11 @@ main > section:last-of-type {
   color: var(--muted);
   margin-bottom: 18px;
 }
+.project-desc b,
+.project-highlights b {
+  color: var(--text);
+  font-weight: 600;
+}
 .project-highlights {
   list-style: none;
   margin-bottom: 22px;
