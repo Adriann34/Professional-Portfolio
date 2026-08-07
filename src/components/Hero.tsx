@@ -33,11 +33,13 @@ const Hero: React.FC = () => {
             </div>
             <div className="hero-role">Full Stack Developer</div>
             <p className="hero-desc">
-              Full-stack developer with experience building and shipping
-              production-grade web applications and custom business systems.
-              Skilled in designing secure APIs, scalable backend architectures,
-              authentication systems, real-time applications, AI integrations,
-              workflow automation, and application security.
+              Full-stack developer with experience <b>building</b> and{" "}
+              <b>shipping production-grade software</b> and{" "}
+              <b>custom business systems</b>. Skilled in{" "}
+              <b>architecting resilient systems</b> with <b>secure APIs</b>,{" "}
+              <b>real-time synchronization</b>, <b>AI integrations</b>,{" "}
+              <b>automation workflows</b>, and{" "}
+              <b>scalable backend architectures</b>.
             </p>
             <div className="hero-actions">
               <a
