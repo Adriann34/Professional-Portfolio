@@ -207,7 +207,17 @@ const ProjectCard: React.FC<{ project: Project; delay: string }> = ({
   const cardVars = { "--delay": delay } as React.CSSProperties;
 
   return (
-    <div className="project-card fade-in" style={cardVars} ref={ref}>
+    <div
+      className={`project-card fade-in${
+        project.title === "Gacha Command Center"
+          ? " project-card-gacha"
+          : project.title === "Renew"
+            ? " project-card-renew"
+            : ""
+      }`}
+      style={cardVars}
+      ref={ref}
+    >
       <div className="project-inner">
         <ProjectVisual project={project} />
         <div className="project-info">

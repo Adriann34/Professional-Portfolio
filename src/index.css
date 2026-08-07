@@ -818,6 +818,53 @@ main > section:last-of-type {
   margin-top: 24px;
   align-self: flex-start;
 }
+.project-card-gacha .project-info {
+  padding: 28px 30px;
+}
+.project-card-gacha .project-category {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.project-card-gacha .project-title {
+  font-size: 25px;
+  margin-bottom: 13px;
+}
+.project-card-gacha .project-desc {
+  font-size: 13.5px;
+  margin-bottom: 15px;
+}
+.project-card-gacha .project-highlights {
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.project-card-gacha .project-highlights li {
+  font-size: 13px;
+}
+.project-card-gacha .project-cta {
+  margin-top: 20px;
+}
+.project-card-renew .project-info {
+  padding: 30px;
+}
+.project-card-renew .project-category {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.project-card-renew .project-title {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+.project-card-renew .project-desc {
+  font-size: 13.5px;
+  margin-bottom: 16px;
+}
+.project-card-renew .project-highlights {
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.project-card-renew .project-highlights li {
+  font-size: 13px;
+}
 
 /* ─── CONTACT ─── */
 .contact-grid {

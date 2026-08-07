@@ -78,7 +78,7 @@ export const skillCards: SkillCard[] = [
 
 export const projects: Project[] = [
   {
-    category: "Full-Stack Marketplace",
+    category: "AI-powered Marketplace",
     title: "Renew",
     description: [
       { text: "Renew is an " },
@@ -141,17 +141,50 @@ export const projects: Project[] = [
     ],
   },
   {
-    category: "Live-Service Dashboard System",
+    category: "Personal Companion Dashboard",
     title: "Gacha Command Center",
-    description:
-      "A live, two-service dashboard system: a React/TypeScript frontend with Firebase Auth + real-time Firestore sync, fed by a separate Cloudflare Worker that runs a scheduled ETL job aggregating data from multiple unauthenticated third-party APIs — with data-integrity guards, fallback resolution, and graceful degradation when upstream sources fail. Applied to Genshin Impact, a live service game (banners, events, resets, 100+ characters).",
-    highlights: [
-      { text: "Live banners, events, and version tracking via a scheduled Cloudflare Worker" },
-      { text: "Character showcase synced using Enka API — builds, artifacts, and stats" },
-      { text: "Personal Task tracker with deadlines, categories, and global search" },
-      { text: "Smart reminders for banner/event/reset deadlines, fully configurable" },
+    description: [
+      { text: "Gacha Command Center is a " },
+      { text: "command center for Genshin Impact players", bold: true },
+      { text: ", a browser app that turns live in-game account data, active banners/events, and reset timers into one at-a-glance dashboard, wrapped in a " },
+      { text: "Teyvat-themed UI", bold: true },
+      { text: "." },
     ],
-    stack: ["React", "TypeScript", "Tailwind CSS", "Firebase", "Firestore Rest API", "Cloudflare Workers"],
+    highlights: [
+      { text: [
+        { text: "Teyvat Overview dashboard", bold: true },
+        { text: " with current and featured 5★ banner pools, live event listings, next game version, and persistent countdowns" },
+      ] },
+      { text: [
+        { text: "Reset countdowns", bold: true },
+        { text: " for Spiral Abyss and Imaginarium Theater synced via the HoYoLAB API" },
+      ] },
+      { text: [
+        { text: "Battle Chronicle integration", bold: true },
+        { text: " with real resin, home coin, expedition, and commission data via a Cloudflare Worker that encrypts and securely stores HoYoLAB cookies, signs requests, and proxies around API CORS and DS limitations" },
+      ] },
+      { text: [
+        { text: "Client-side live ticking", bold: true },
+        { text: " for resin, realm currency, transformer, and expeditions projected forward from pure-function snapshots without polling" },
+      ] },
+      { text: [
+        { text: "Smart notification bell", bold: true },
+        { text: " with configurable reminders for resets, banner and event endings, capped resin, finished expeditions, commission bonuses, and the ready transformer" },
+      ] },
+      { text: [
+        { text: "My Characters page", bold: true },
+        { text: " with roster data, per-character gear, weapons, and artifacts, filterable by element, weapon type, rarity, and favorites" },
+      ] },
+      { text: [
+        { text: "Adventurer's Log goal tracker", bold: true },
+        { text: " for creating, scheduling, and tracking farming, Abyss prep, and wish-planning goals backed by Firestore" },
+      ] },
+      { text: [
+        { text: "Email auth with route-guarding", bold: true },
+        { text: ", plus Firebase App Check with reCAPTCHA v3 to stop scripted abuse of the free-tier backend" },
+      ] },
+    ],
+    stack: ["React", "TypeScript", "Vite", "React Router", "Tailwind CSS", "Firebase Auth", "Firestore", "Firebase App Check", "Cloudflare Workers"],
     mainImage: "/images/gcc-new/GCC_Dashboard_3.png",
     mainImageAlt: "Gacha Command Center dashboard with banner, event, and reset countdowns",
     secondaryImage: "/images/gcc-new/GCC_Signin_2.png",
@@ -174,13 +207,20 @@ export const projects: Project[] = [
   {
     category: "Operations Platform",
     title: "Taters Web Work System",
-    description:
-      "A full-stack operations management platform for Taters, a food company in the Philippines, featuring a React/TypeScript frontend that communicates with a PHP (CodeIgniter) REST API via Axios and persists data in a MySQL database. Covers inventory levels, daily manpower attendance, incident reports, machine logs, purchase requisitions, and efficiency metrics in a unified admin panel.",
+    description: [
+      { text: "A " },
+      { text: "full-stack operations management platform", bold: true },
+      { text: " for Taters, a food company in the Philippines, featuring a React/TypeScript frontend that communicates with a " },
+      { text: "PHP (CodeIgniter) REST API", bold: true },
+      { text: " via Axios and persists data in a " },
+      { text: "MySQL database", bold: true },
+      { text: ". Covers inventory levels, daily manpower attendance, incident reports, machine logs, purchase requisitions, and efficiency metrics in a unified admin panel." },
+    ],
     highlights: [
-      { text: "Materials and inventory level management" },
-      { text: "Daily manpower attendance and incident reporting" },
-      { text: "Machine logs and efficiency metrics dashboards" },
-      { text: "Purchase requisition and approval workflows" },
+      { text: [{ text: "Materials and inventory level management", bold: true }] },
+      { text: [{ text: "Daily manpower attendance", bold: true }, { text: " and incident reporting" }] },
+      { text: [{ text: "Machine logs and efficiency metrics dashboards", bold: true }] },
+      { text: [{ text: "Purchase requisition and approval workflows", bold: true }] },
     ],
     stack: ["React", "TypeScript", "Tailwind CSS", "PHP", "MySQL"],
     mainImage: "/images/taters-main.jpg",
@@ -189,13 +229,20 @@ export const projects: Project[] = [
   {
     category: "Native Desktop Markdown Editor",
     title: "SimpleMD",
-    description:
-      "A lightweight native desktop Markdown editor built with Tauri v2, providing a distraction-free writing experience with a live rendered preview in a fast, low-memory desktop application.",
+    description: [
+      { text: "A " },
+      { text: "lightweight native desktop Markdown editor", bold: true },
+      { text: " built with " },
+      { text: "Tauri v2", bold: true },
+      { text: ", providing a distraction-free writing experience with a " },
+      { text: "live rendered preview", bold: true },
+      { text: " in a fast, low-memory desktop application." },
+    ],
     highlights: [
-      { text: "Three editing modes: Edit, Preview, and Split with live Markdown rendering" },
-      { text: "Full Markdown and GitHub Flavored Markdown support, including tables, task lists, and blockquotes" },
-      { text: "Built-in syntax highlighting with a custom dependency-free tokenizer" },
-      { text: "Native file integration, themes, preview zoom, autosave, and live word count" },
+      { text: [{ text: "Three editing modes", bold: true }, { text: ": Edit, Preview, and Split with live Markdown rendering" }] },
+      { text: [{ text: "Full Markdown and GitHub Flavored Markdown support", bold: true }, { text: ", including tables, task lists, and blockquotes" }] },
+      { text: [{ text: "Built-in syntax highlighting", bold: true }, { text: " with a custom dependency-free tokenizer" }] },
+      { text: [{ text: "Native file integration", bold: true }, { text: ", themes, preview zoom, autosave, and live word count" }] },
     ],
     stack: ["React", "TypeScript", "Tauri v2", "Rust", "Vite"],
     mainImage: "/images/simplemd/SimpleMD_1.png",
