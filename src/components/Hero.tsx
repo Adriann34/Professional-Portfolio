@@ -33,11 +33,11 @@ const Hero: React.FC = () => {
             </div>
             <div className="hero-role">Full Stack Developer</div>
             <p className="hero-desc">
-              Full-stack developer who's shipped <b>production software</b> for
-              a real business and built independent systems handling{" "}
-              <b>live data sync</b> and <b>failure recovery</b>. I care about
-              software that holds up when things go wrong, not just when
-              everything works.
+              Full-stack developer with experience building and shipping
+              production-grade web applications and custom business systems.
+              Skilled in designing secure APIs, scalable backend architectures,
+              authentication systems, real-time applications, AI integrations,
+              workflow automation, and application security.
             </p>
             <div className="hero-actions">
               <a
@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
             <div className="hero-cards-grid">
               <div className="hcard">
                 <div className="hcard-label">PROJECTS</div>
-                <div className="hcard-value">3+ Projects</div>
+                <div className="hcard-value">4+ Projects</div>
                 <div className="hcard-sub">Shipped products</div>
               </div>
               <div className="hcard">
