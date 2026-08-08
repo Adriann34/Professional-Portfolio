@@ -8,6 +8,6 @@ const Hero: React.FC = () => <section className="wrap hero" id="top">
     <p className="intro">I&apos;m Adrian, a full-stack developer focused on turning messy, real-world problems into simple, dependable products.</p>
     <p className="hero-note">Marketplaces, business systems, automation and realtime applications. I care more about the product working well and holding up under real conditions.</p>
   </div>
-  <a href="#work" className="project-link" onClick={(e) => { e.preventDefault(); scrollToSection("work"); }}>See selected work ↓</a>
+  <a href="#work" className="project-link" onClick={(e) => { e.preventDefault(); scrollToSection("work"); }}>See selected work <span className="link-arrow" aria-hidden="true">↓</span></a>
 </section>;
 export default Hero;

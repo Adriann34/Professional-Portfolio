@@ -30,6 +30,9 @@ export interface Project {
   stack: string[];
   mainImage: string;
   mainImageAlt: string;
+  /** Optional compact card image. It is intentionally excluded from the lightbox gallery. */
+  previewImage?: string;
+  previewImageAlt?: string;
   secondaryImage?: string;
   secondaryImageAlt?: string;
   /** External link to a live, working deployment. When present, the card shows a
@@ -124,6 +127,8 @@ export const projects: Project[] = [
     stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Supabase Postgres", "Supabase Auth", "Supabase Realtime", "Supabase Storage", "Google Gemini", "Vercel"],
     mainImage: "/images/renew-new/Renew_Home_1.png",
     mainImageAlt: "Renew homepage — used PC hardware marketplace with a featured verified listing",
+    previewImage: "/images/preview photos/renew-preview.png",
+    previewImageAlt: "Renew marketplace homepage preview",
     secondaryImage: "/images/renew-new/Renew_Listing_4.png",
     secondaryImageAlt: "Renew listing detail page showing the diagnostic report and proof checklist",
     liveUrl: "https://renew-marketplace.vercel.app/",
@@ -187,6 +192,8 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Vite", "React Router", "Tailwind CSS", "Firebase Auth", "Firestore", "Firebase App Check", "Cloudflare Workers"],
     mainImage: "/images/gcc-new/GCC_Dashboard_3.png",
     mainImageAlt: "Gacha Command Center dashboard with banner, event, and reset countdowns",
+    previewImage: "/images/preview photos/gacha-preview.png",
+    previewImageAlt: "Gacha Command Center dashboard preview",
     secondaryImage: "/images/gcc-new/GCC_Signin_2.png",
     secondaryImageAlt: "Gacha Command Center sign-in screen",
     liveUrl: "https://gacha-command-center.web.app/",
