@@ -1,10 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="#070A08"/>
-  <polyline points="172,152 302,256 172,360"
-            fill="none"
-            stroke="#6AD09D"
-            stroke-width="52"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
-  <rect x="278" y="322" width="150" height="44" rx="22" fill="#6AD09D"/>
+  <rect x="18" y="18" width="476" height="476" rx="128" fill="#fffefa"/>
+  <text x="256" y="369" text-anchor="middle" fill="#171715"
+        font-family="Georgia, 'Times New Roman', serif" font-size="326"
+        font-weight="700" letter-spacing="-48">at</text>
 </svg>
