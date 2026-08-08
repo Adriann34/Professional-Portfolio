@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 const App: React.FC = () => {
   return (
@@ -12,8 +13,9 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <Skills />
         <Projects />
+        <About />
+        <Skills />
         <Contact />
       </main>
       <Footer />

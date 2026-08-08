@@ -1,0 +1,5 @@
+import React from "react";
+import { contactInfo } from "../data/content";
+
+const About: React.FC = () => <section id="about"><div className="wrap"><div className="section-head"><div className="section-index">02 — ABOUT</div><h2>The useful<br/>kind of curious.</h2></div><div className="about-grid"><div className="about-large">I like getting close to the problem before I get close to the code.</div><div className="about-copy"><p>I&apos;m a full-stack developer from Manila. I build software for people who have real work to do — from verified marketplaces and player tools to internal systems that make a busy operation easier to run.</p><p>My favorite projects sit between product thinking and engineering: finding the simplest shape for a complicated idea, then making it reliable enough to live in the real world.</p><div className="facts"><div className="fact"><span>Based in</span><span>{contactInfo.location}</span></div><div className="fact"><span>Focus</span><span>Product engineering &amp; systems</span></div><div className="fact"><span>Open to</span><span>Good problems, thoughtful teams</span></div></div></div></div></div></section>;
+export default About;
