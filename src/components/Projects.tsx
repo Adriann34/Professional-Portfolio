@@ -4,7 +4,13 @@ import { projects, Project, ProjectTextPart } from "../data/content";
 const rich = (value: string | ProjectTextPart[]) => typeof value === "string" ? value : value.map((part, i) => part.bold ? <b key={i}>{part.text}</b> : <React.Fragment key={i}>{part.text}</React.Fragment>);
 
 const SHORT_HIGHLIGHTS: Record<string, string[]> = {
-  Renew: ["AI photo verification", "Realtime buyer–seller chat", "Verified marketplace listings"],
+  Renew: [
+    "AI photo verification for condition, performance, power draw, and boot status",
+    "AI-assisted listings with diagnostic autofill and an AI support chatbot",
+    "Realtime buyer–seller chat with photo attachments and secure, scoped messaging",
+    "Global marketplace with multi-currency pricing, live exchange rates, and geolocation",
+    "Full marketplace infrastructure with seller dashboards, authentication, lifecycle tools, and anti-abuse protection",
+  ],
   "Gacha Command Center": ["Live banners and event timers", "HoYoLAB account sync", "Goals, reminders and reset tracking"],
   "Taters Web Work System": ["Inventory and materials", "Attendance and incident reporting", "Purchase approval workflows"],
   SimpleMD: ["Split editing and live preview", "GFM and syntax highlighting", "Native files and autosave"],
