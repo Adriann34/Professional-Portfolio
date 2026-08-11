@@ -9,7 +9,7 @@ const SHORT_HIGHLIGHTS: Record<string, string[]> = {
     "AI-assisted listings with diagnostic autofill and an AI support chatbot",
     "Realtime buyer–seller chat with photo attachments and secure, scoped messaging",
     "Global marketplace with multi-currency pricing, live exchange rates, and geolocation",
-    "Full marketplace infrastructure with seller dashboards, authentication, lifecycle tools, and anti-abuse protection",
+    "Full marketplace infrastructure with seller dashboards, authentication, and anti-abuse protection",
   ],
   "Gacha Command Center": ["Live banners and event timers", "HoYoLAB account sync", "Goals, reminders and reset tracking"],
   "Taters Web Work System": ["Inventory and materials", "Attendance and incident reporting", "Purchase approval workflows"],
