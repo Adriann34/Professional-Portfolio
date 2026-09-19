@@ -87,12 +87,28 @@ const experience = [
 
 const projects = [
   {
-    title: "Gacha Command Center",
-    category: "Personal companion dashboard",
-    image: "/images/projects/gacha-command-center-studio.png",
-    alt: "Gacha Command Center character dashboard displayed on a MacBook Pro",
-    stack: ["React", "TypeScript", "Firebase"],
-    href: "https://gacha-command-center.web.app/",
+    title: "Renew Marketplace",
+    category: "Used hardware marketplace",
+    image: "/images/projects/renew-marketplace.png",
+    alt: "Renew used PC hardware marketplace displayed in dark mode on a laptop",
+    stack: ["React", "Tailwind", "PostgreSQL"],
+    href: "https://renew-marketplace.vercel.app/",
+  },
+  {
+    title: "Renew Mobile Experience",
+    category: "Mobile marketplace experience",
+    image: "/images/projects/renew-mobile-studio.png",
+    alt: "Renew marketplace mobile sign-in page displayed on a black iPhone in a dark studio",
+    stack: ["React", "Tailwind", "PostgreSQL"],
+    href: "https://renew-marketplace.vercel.app/signin",
+  },
+  {
+    title: "GoNotarize",
+    category: "Remote online notarization",
+    image: "/images/projects/gonotarize.png",
+    alt: "GoNotarize online notarization landing page displayed on a laptop",
+    stack: ["Next.js", "TypeScript", "Supabase"],
+    href: "https://gonotarize.online/",
   },
   {
     title: "Taters Web Work System",
@@ -100,6 +116,14 @@ const projects = [
     image: "/images/projects/taters-cover.png",
     alt: "Taters operations dashboard showing workplace inventory and management tools",
     stack: ["React", "PHP", "MySQL"],
+  },
+  {
+    title: "Gacha Command Center",
+    category: "Personal companion dashboard",
+    image: "/images/projects/gacha-command-center-studio.png",
+    alt: "Gacha Command Center character dashboard displayed on a MacBook Pro",
+    stack: ["React", "TypeScript", "Firebase"],
+    href: "https://gacha-command-center.web.app/",
   },
   {
     title: "SimpleMD",
@@ -184,7 +208,7 @@ export default function Home() {
       <section className="hero shell" aria-labelledby="hero-title"><div className="hero-kicker meta-label">THOUGHTFULLY BUILT. PERSONALLY CRAFTED.</div><div className="portrait-wrap"><img className="portrait" src="/images/adrian.png" alt="Adrian Tan" fetchPriority="high" /><div className="portrait-caption"><span>Adrian Tan</span><span>Software Engineer</span></div></div><h1 id="hero-title"><span>Software</span><span>Engineer</span></h1><div className="hero-intro"><p>Hi, I’m Adrian. I turn complex<br className="desktop-break" /> ideas into simple, considered<br className="desktop-break" /> digital experiences.</p></div><a className="hero-bottom" href="#work"><span className="circle-arrow"><ArrowDown size={18} /></span><span>SCROLL TO EXPLORE</span></a></section>
       <section className="tech-section" aria-label="Technologies I use"><div className="shell tech-heading"><span className="meta-label">MY EVERYDAY TOOLKIT</span></div><div className="tech-window"><div className="tech-track">{[0, 1].map((copy) => <div className="tech-group" key={copy} aria-hidden={copy === 1}>{technologies.map(([icon, name]) => <div className="tech-pill" key={name}><img src={`/tech/${icon}.svg`} alt="" /><span>{name}</span></div>)}<div className="tech-pill"><Flame aria-hidden="true" /><span>Firebase</span></div></div>)}</div></div></section>
       <section id="about" className="about shell section-space"><div className="section-label reveal"><span className="section-pill">A little about me</span></div><div className="section-heading reveal"><h2>Engineering the details.<br /><span>Seeing the bigger picture.</span></h2></div><div className="about-grid reveal"><Slideshow /><aside className="about-aside"><div><span className="meta-label muted">THE APPROACH</span><h3>Curiosity.<br />Craft.<br />Follow-through.</h3></div><p>I like building things that solve real problems — and taking the time to make them feel effortless.</p><a className="text-link" href="https://renew-marketplace.vercel.app/" target="_blank" rel="noreferrer">Meet my latest project <ArrowUpRight size={17} /></a></aside></div></section>
-      <section className="capabilities shell section-space" aria-labelledby="services-title"><div className="capability-heading reveal"><div><span className="capability-eyebrow">SERVICES</span><h2 id="services-title">Ideas, built for what&apos;s next.</h2></div><p>From polished interfaces to powerful infrastructure,<br className="desktop-break" /> I help turn complex ideas into intuitive, real-world products.</p></div><div className="capability-grid">{capabilities.map(({ name, text, tag, image }, index) => <article className={`capability reveal ${index === 2 ? "dark-card" : ""}`} key={name}><div className="capability-content"><div className="capability-copy"><span className="capability-tag">{tag}</span><h3>{name}</h3><p>{text}</p></div></div><div className="capability-visual"><img src={image} alt="" loading="lazy" /></div></article>)}</div></section>
+      <section className="capabilities shell section-space" aria-labelledby="services-title"><div className="section-label reveal"><span className="section-pill">Services</span></div><div className="capability-heading section-heading reveal"><h2 id="services-title">Ideas, built for what&apos;s next.</h2></div><div className="capability-grid">{capabilities.map(({ name, text, tag, image }, index) => <article className={`capability reveal ${index === 2 ? "dark-card" : ""}`} key={name}><div className="capability-content"><div className="capability-copy"><span className="capability-tag">{tag}</span><h3>{name}</h3><p>{text}</p></div></div><div className="capability-visual"><img src={image} alt="" loading="lazy" /></div></article>)}</div></section>
       <section id="experience" className="experience section-space"><div className="shell"><div className="section-label reveal"><span className="section-pill">The journey</span></div><div className="section-heading reveal"><h2>Always learning.<br /><span>Always building.</span></h2></div><div className="experience-rows">{experience.map((item) => <article className="experience-row reveal" key={item.company}><div className="experience-copy"><h3>{item.role}</h3><p className="experience-company">{item.company}</p><p className="experience-description">{item.description}</p></div><span className="experience-date">{item.date}</span></article>)}</div></div></section>
       <section id="work" className="work shell section-space"><div className="section-label reveal"><span className="section-pill">Selected work</span></div><div className="section-heading reveal"><h2>A few things<br /><span>I’ve put into the world.</span></h2></div><div className="project-gallery reveal">{projects.map((project) => <ProjectCard project={project} key={project.title} />)}</div></section>
     </main>

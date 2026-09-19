@@ -40,9 +40,7 @@
 /* Illustrated services */
 .capabilities{display:block;padding-bottom:110px}
 .capability-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:50px}
-.capability-eyebrow{display:block;margin-bottom:24px;color:#637084;font-size:11px;font-weight:600;letter-spacing:.34em}
 .capability-heading h2{font-size:clamp(38px,3.35vw,52px);line-height:1.08}
-.capability-heading>p{max-width:530px;padding-bottom:3px;color:#667085;font-size:15px;line-height:1.55}
 .capability-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .capability{position:relative;min-height:350px;padding:0;overflow:hidden;border:1px solid #dfe3e8;border-radius:18px;background:#fbfcfd;transition:transform .35s ease,box-shadow .35s ease;isolation:isolate}
 .capability:hover{transform:translateY(-4px);background:#fbfcfd;box-shadow:0 18px 45px #1c27330d}
@@ -66,7 +64,6 @@
 
 @media(max-width:1100px){
   .capability-heading{gap:35px}
-  .capability-heading>p{max-width:430px}
   .capability{min-height:330px;padding:0}
   .capability-content{width:49%;padding:48px 0 35px 27px}
   .capability-tag{font-size:12px}
@@ -77,9 +74,7 @@
 @media(max-width:760px){
   .capabilities{padding-bottom:65px}
   .capability-heading{display:block;margin-bottom:30px}
-  .capability-eyebrow{margin-bottom:17px;font-size:9px}
   .capability-heading h2{font-size:35px}
-  .capability-heading>p{margin-top:18px;padding:0;font-size:13px}
   .capability-grid{grid-template-columns:1fr;gap:12px}
   .capability{min-height:440px;padding:0;border-radius:14px}
   .capability-content{width:100%;height:auto;padding:31px 24px 0}
