@@ -1,49 +1,27 @@
 # Adrian Tan — Portfolio
 
-My personal portfolio built in React and TypeScript.
+Adrian Tan’s portfolio, built with Next.js, React, TypeScript, Tailwind CSS, and the project’s shadcn-style component primitives.
 
-🔗 **Live site:** https://adrian-tan-portfolio.web.app/
+Live site: https://adrian-tan-portfolio.web.app/
 
-## Features
+## Local development
 
-- Single-page layout with smooth scroll navigation (About, Skills, Projects, Contact)
-- Animated fade-in sections on scroll
-- Skills broken down by layer with proficiency bars
-- Project showcase with highlights, tech stack tags, and images
-- Contact form powered by EmailJS (no backend needed)
-
-## Tech Used
-
-- React 18
-- TypeScript
-- CSS
-- EmailJS (contact form)
-- Firebase Hosting (deployment)
-
-## Project Structure
-
+```bash
+npm install
+npm run dev
 ```
-adriantan-portfolio/
-├── public/
-│   └── images/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Skills.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Contact.tsx
-│   │   └── Footer.tsx
-│   ├── data/
-│   │   └── content.ts
-│   ├── hooks/
-│   │   ├── useActiveSection.ts
-│   │   └── useFadeIn.ts
-│   ├── utils/
-│   │   └── scroll.ts
-│   ├── App.tsx
-│   ├── index.tsx
-│   └── index.css
-├── firebase.json
-└── package.json
+
+## Verification
+
+```bash
+npm run lint
+npm run build
+```
+
+The production build is a static export in `out/`. Firebase Hosting serves that directory according to `firebase.json`.
+
+Deployment is intentionally manual:
+
+```bash
+firebase deploy --only hosting
 ```
