@@ -76,16 +76,16 @@
   .capability-heading{display:block;margin-bottom:30px}
   .capability-heading h2{font-size:35px}
   .capability-grid{grid-template-columns:1fr;gap:12px}
-  .capability{min-height:440px;padding:0;border-radius:14px}
+  .capability{min-height:0;padding:0;border-radius:14px}
   .capability-content{width:100%;height:auto;padding:31px 24px 0}
   .capability-copy{margin-top:0}
   .capability-tag{font-size:11px}
   .capability h3{max-width:none;margin:12px 0 11px;font-size:29px;letter-spacing:-1.15px}
   .capability p{font-size:12px}
-  .capability-visual,.dark-card .capability-visual{top:auto;right:0;bottom:5px;width:100%;height:235px;-webkit-mask-image:none;mask-image:none}
-  .capability-visual img,.dark-card .capability-visual img{width:92%;height:92%;object-fit:contain;transform:none}
+  .capability-visual,.dark-card .capability-visual{position:static;top:auto;right:auto;bottom:auto;width:100%;height:auto;margin-top:16px;padding:0 20px 22px;-webkit-mask-image:none;mask-image:none}
+  .capability-visual img,.dark-card .capability-visual img{width:100%;height:auto;transform:none}
   .capability:hover .capability-visual img{transform:scale(1.012)}
   .dark-card .capability-visual img{object-fit:contain}
 }
 
-@media(max-width:380px){.capability-content{padding-inline:19px}}
+@media(max-width:380px){.capability-content,.capability-visual,.dark-card .capability-visual{padding-inline:19px}}

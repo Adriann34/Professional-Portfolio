@@ -66,7 +66,7 @@ const slides = [
 const capabilities = [
   { name: "Interfaces that feel right.", text: "Responsive layouts, thoughtful interactions, and attention to the smallest detail.", tag: "Frontend development", image: "/images/services/frontend.png" },
   { name: "From idea to application.", text: "Connecting the interface to the logic that makes a product work.", tag: "Full-stack engineering", image: "/images/services/full-stack.png" },
-  { name: "A solid foundation.", text: "Structured data, authentication, and storage built into the experience.", tag: "Data & integration", image: "/images/services/data-integration.png" },
+  { name: "A solid foundation.", text: "Structured data, authentication, storage, RLS, rate limiting, and encryption at rest built in.", tag: "Data & integration", image: "/images/services/data-integration.png" },
   { name: "In sync. In real time.", text: "Live conversations and instant feedback that keep people connected.", tag: "Realtime experiences", image: "/images/services/realtime.png" },
 ];
 
@@ -87,19 +87,19 @@ const experience = [
 
 const projects = [
   {
-    title: "Renew Marketplace",
-    category: "Used hardware marketplace",
+    title: "Renew",
+    category: "AI-Powered Marketplace",
     image: "/images/projects/renew-marketplace.png",
     alt: "Renew used PC hardware marketplace displayed in dark mode on a laptop",
     stack: ["React", "Tailwind", "PostgreSQL"],
     href: "https://renew-marketplace.vercel.app/",
   },
   {
-    title: "Renew Mobile Experience",
-    category: "Mobile marketplace experience",
+    title: "Built for every screen",
+    category: "Responsive Experience",
     image: "/images/projects/renew-mobile-studio.png",
     alt: "Renew marketplace mobile sign-in page displayed on a black iPhone in a dark studio",
-    stack: ["React", "Tailwind", "PostgreSQL"],
+    stack: ["Responsive", "Mobile-first", "Interactive"],
     href: "https://renew-marketplace.vercel.app/signin",
   },
   {
@@ -111,15 +111,15 @@ const projects = [
     href: "https://gonotarize.online/",
   },
   {
-    title: "Taters Web Work System",
-    category: "Operations platform",
+    title: "Custom ERP for Business Operations",
+    category: "ENTERPRISE WEB APPLICATION",
     image: "/images/projects/taters-cover.png",
     alt: "Taters operations dashboard showing workplace inventory and management tools",
     stack: ["React", "PHP", "MySQL"],
   },
   {
-    title: "Gacha Command Center",
-    category: "Personal companion dashboard",
+    title: "Interactive Dashboards",
+    category: "Data-Driven Interfaces",
     image: "/images/projects/gacha-command-center-studio.png",
     alt: "Gacha Command Center character dashboard displayed on a MacBook Pro",
     stack: ["React", "TypeScript", "Firebase"],
@@ -207,10 +207,10 @@ export default function Home() {
     <main id="main">
       <section className="hero shell" aria-labelledby="hero-title"><div className="hero-kicker meta-label">THOUGHTFULLY BUILT. PERSONALLY CRAFTED.</div><div className="portrait-wrap"><img className="portrait" src="/images/adrian.png" alt="Adrian Tan" fetchPriority="high" /><div className="portrait-caption"><span>Adrian Tan</span><span>Software Engineer</span></div></div><h1 id="hero-title"><span>Software</span><span>Engineer</span></h1><div className="hero-intro"><p>Hi, I’m Adrian. I turn complex<br className="desktop-break" /> ideas into simple, considered<br className="desktop-break" /> digital experiences.</p></div><a className="hero-bottom" href="#work"><span className="circle-arrow"><ArrowDown size={18} /></span><span>SCROLL TO EXPLORE</span></a></section>
       <section className="tech-section" aria-label="Technologies I use"><div className="shell tech-heading"><span className="meta-label">MY EVERYDAY TOOLKIT</span></div><div className="tech-window"><div className="tech-track">{[0, 1].map((copy) => <div className="tech-group" key={copy} aria-hidden={copy === 1}>{technologies.map(([icon, name]) => <div className="tech-pill" key={name}><img src={`/tech/${icon}.svg`} alt="" /><span>{name}</span></div>)}<div className="tech-pill"><Flame aria-hidden="true" /><span>Firebase</span></div></div>)}</div></div></section>
-      <section id="about" className="about shell section-space"><div className="section-label reveal"><span className="section-pill">A little about me</span></div><div className="section-heading reveal"><h2>Engineering the details.<br /><span>Seeing the bigger picture.</span></h2></div><div className="about-grid reveal"><Slideshow /><aside className="about-aside"><div><span className="meta-label muted">THE APPROACH</span><h3>Curiosity.<br />Craft.<br />Follow-through.</h3></div><p>I like building things that solve real problems — and taking the time to make them feel effortless.</p><a className="text-link" href="https://renew-marketplace.vercel.app/" target="_blank" rel="noreferrer">Meet my latest project <ArrowUpRight size={17} /></a></aside></div></section>
+      <section id="about" className="about shell section-space"><div className="section-label reveal"><span className="section-pill">A little about me</span></div><div className="section-heading reveal"><h2>Engineering the details,<br /><span>Seeing the bigger picture.</span></h2></div><div className="about-grid reveal"><Slideshow /><aside className="about-aside"><div><span className="meta-label muted">THE APPROACH</span><h3>Curiosity.<br />Craft.<br />Follow-through.</h3></div><p>I like building things that solve real problems — and taking the time to make them feel effortless.</p><a className="text-link" href="https://renew-marketplace.vercel.app/" target="_blank" rel="noreferrer">Meet my latest project <ArrowUpRight size={17} /></a></aside></div></section>
       <section className="capabilities shell section-space" aria-labelledby="services-title"><div className="section-label reveal"><span className="section-pill">Services</span></div><div className="capability-heading section-heading reveal"><h2 id="services-title">Ideas, built for what&apos;s next.</h2></div><div className="capability-grid">{capabilities.map(({ name, text, tag, image }, index) => <article className={`capability reveal ${index === 2 ? "dark-card" : ""}`} key={name}><div className="capability-content"><div className="capability-copy"><span className="capability-tag">{tag}</span><h3>{name}</h3><p>{text}</p></div></div><div className="capability-visual"><img src={image} alt="" loading="lazy" /></div></article>)}</div></section>
       <section id="experience" className="experience section-space"><div className="shell"><div className="section-label reveal"><span className="section-pill">The journey</span></div><div className="section-heading reveal"><h2>Always learning.<br /><span>Always building.</span></h2></div><div className="experience-rows">{experience.map((item) => <article className="experience-row reveal" key={item.company}><div className="experience-copy"><h3>{item.role}</h3><p className="experience-company">{item.company}</p><p className="experience-description">{item.description}</p></div><span className="experience-date">{item.date}</span></article>)}</div></div></section>
-      <section id="work" className="work shell section-space"><div className="section-label reveal"><span className="section-pill">Selected work</span></div><div className="section-heading reveal"><h2>A few things<br /><span>I’ve put into the world.</span></h2></div><div className="project-gallery reveal">{projects.map((project) => <ProjectCard project={project} key={project.title} />)}</div></section>
+      <section id="work" className="work shell section-space"><div className="section-label reveal"><span className="section-pill">Portfolio</span></div><div className="section-heading reveal"><h2>A few things<br /><span>I’ve put into the world.</span></h2></div><div className="project-gallery reveal">{projects.map((project) => <ProjectCard project={project} key={project.title} />)}</div></section>
     </main>
     <footer className="footer"><div className="shell"><div className="footer-top"><span className="meta-label">GOOD WORK STARTS WITH CURIOSITY.</span><a href="#top" className="back-top">Back to top <span><ArrowUp size={20} /></span></a></div><a className="footer-cta" href="mailto:adriantanbusiness34@gmail.com"><h2>Let’s build<br />something good.</h2><ArrowUpRight aria-hidden="true" /></a><div className="footer-bottom"><a className="wordmark" href="#top">Adrian</a><span>Software Engineer</span><nav aria-label="Contact links"><a href="mailto:adriantanbusiness34@gmail.com">Email</a><a href="https://www.linkedin.com/in/adrian-jude-tan/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Adriann34" target="_blank" rel="noreferrer">GitHub</a></nav><span>© {new Date().getFullYear()} Adrian Tan</span></div></div></footer>
   </>;
