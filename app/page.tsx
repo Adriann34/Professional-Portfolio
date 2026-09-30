@@ -74,13 +74,13 @@ const experience = [
   {
     role: "Software Engineer",
     company: "Taters Enterprises Inc.",
-    date: "2024 — 2025",
+    date: "2024 - 2025",
     description: "Built a full-stack ERP platform using React, TypeScript, PHP CodeIgniter, and MySQL to streamline multi-branch operations, reporting, workflow automation, and business performance tracking.",
   },
   {
     role: "Full Stack Web Developer",
     company: "Freelance",
-    date: "2025 — 2026",
+    date: "2025 - 2026",
     description: "Built landing pages and custom web systems for clients, turning business needs into responsive interfaces, streamlined workflows, and polished digital experiences.",
   },
   {
