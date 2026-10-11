@@ -91,12 +91,11 @@ const experience = [
 
 const projects = [
   {
-    title: "Renew",
-    category: "AI-Powered Marketplace",
-    image: "/images/projects/renew-marketplace.png",
-    alt: "Renew used PC hardware marketplace displayed in dark mode on a laptop",
-    stack: ["React", "Tailwind", "PostgreSQL"],
-    href: "https://renew-marketplace.vercel.app/",
+    title: "Secret Magic",
+    category: "AI assistant landing page",
+    image: "/images/projects/secret-magic.png",
+    alt: "Secret Magic landing page hero displayed on a laptop in a dark studio",
+    stack: ["Next.js", "React", "TypeScript"],
   },
   {
     title: "Built for every screen",
@@ -122,12 +121,19 @@ const projects = [
     stack: ["React", "PHP", "MySQL"],
   },
   {
-    title: "Interactive Dashboards",
-    category: "Data-Driven Interfaces",
-    image: "/images/projects/gacha-command-center-studio.png",
-    alt: "Gacha Command Center character dashboard displayed on a MacBook Pro",
-    stack: ["React", "TypeScript", "Firebase"],
-    href: "https://gacha-command-center.web.app/",
+    title: "Folio",
+    category: "Studio workspace landing page",
+    image: "/images/projects/folio.png",
+    alt: "Folio landing page hero and studio workspace preview displayed on a laptop in a dark studio",
+    stack: ["HTML", "CSS", "Responsive"],
+  },
+  {
+    title: "Renew",
+    category: "AI-Powered Marketplace",
+    image: "/images/projects/renew-marketplace.png",
+    alt: "Renew used PC hardware marketplace displayed in dark mode on a laptop",
+    stack: ["React", "Tailwind", "PostgreSQL"],
+    href: "https://renew-marketplace.vercel.app/",
   },
   {
     title: "SimpleMD",
@@ -135,6 +141,14 @@ const projects = [
     image: "/images/projects/simplemd.png",
     alt: "SimpleMD editor with Markdown editing and live preview",
     stack: ["Tauri", "Rust", "TypeScript"],
+  },
+  {
+    title: "Interactive Dashboards",
+    category: "Data-Driven Interfaces",
+    image: "/images/projects/gacha-command-center-studio.png",
+    alt: "Gacha Command Center character dashboard displayed on a MacBook Pro",
+    stack: ["React", "TypeScript", "Firebase"],
+    href: "https://gacha-command-center.web.app/",
   },
 ];
 
