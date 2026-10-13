@@ -3,6 +3,12 @@
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
+    "headers": [
+      {
+        "source": "/demos/alvono",
+        "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+      }
+    ],
     "rewrites": [{ "source": "**", "destination": "/index.html" }]
   }
 }
