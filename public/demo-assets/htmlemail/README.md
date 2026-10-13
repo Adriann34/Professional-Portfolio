@@ -1,17 +1,12 @@
-# FreePrints Photobooks email
+# Morrowtale Photobooks email
 
 Browser URL: `/demos/htmlemail`.
 
 `index.html` is a standalone, table-based email with inline CSS, responsive overrides, hidden preheader text, presentation-table semantics, image alt text, and Outlook VML button fallbacks. The static route reads it at build time. Firebase serves the extensionless exported route as HTML.
 
-The campaign is a saved-project reminder. Maya and the saved project are illustrative content; this page does not connect to customer data, Braze, or Listrak. CTA links use the official app page with campaign attribution parameters, rather than an invented project deeplink. Preference and unsubscribe links open the brand's official privacy-request center; no subscription is changed by this page.
+The campaign is a saved-project reminder. Morrowtale is a fictional photo-book brand created for this portfolio. The sender address, offers, recipient Maya, and saved project are fictional. There is no connection to customer data, email delivery, or subscription management.
 
-Product offer, contact address, and destination links were checked against the official pages on October 13, 2026:
-
-- https://www.freeprintsphotobooks.com/
-- https://www.freeprintsphotobooks.com/privacy
-- https://www.freeprintsphotobooks.com/apps
-- https://www.freeprintsphotobooks.com/privacyrequest
+Campaign and footer links use the reserved `morrowtale.example` domain; these are intentionally non-operational destinations and cannot lead to a real company. The browser-view link and artwork URL still use the portfolio host so this page remains shareable. No registered-trademark symbol or real-company identity remains.
 
 Browser rendering was checked at 1440, 768, 390, and 320px. Outlook fallbacks are included, but inbox rendering has not been tested in Litmus or Email on Acid. Before sending through an ESP, replace fixed recipient/project values, connect the authenticated project deeplink, and use that platform's actual preference and unsubscribe URLs.
 
